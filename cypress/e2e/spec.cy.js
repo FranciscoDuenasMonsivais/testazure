@@ -1,8 +1,8 @@
    /// <reference types="cypress" />
-   import { faker } from '@faker-js/faker';
-   import 'cypress-mochawesome-reporter/register';
-   const randomName = faker.name.fullName(); // Rowan Nikolaus
    
+   
+   import { faker } from '@faker-js/faker';
+   const randomName = faker.name.fullName(); // Rowan Nikolaus
    context('Local Storage', () => 
    
    {
