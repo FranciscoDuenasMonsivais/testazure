@@ -8,4 +8,4 @@ module.exports = defineConfig({
   setupNodeEvents(on, config) {
   },
   },
-  video: true});
+  video: false});
