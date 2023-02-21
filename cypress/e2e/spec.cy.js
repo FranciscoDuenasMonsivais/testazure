@@ -25,7 +25,7 @@
     cy.get('#Input_ConfirmPassword').click({ force: true })
     cy.get('#Input_ConfirmPassword').type("Santo104@")
     cy.get('#registerSubmit').click({ force: true }) 
-    cy.get('.section-header > .title').should("contain.text",'Confirme tu cuenta')   
+    cy.get('.section-header > .title').should("contain.text",'Confirma tu cuenta')   
   })
 })
 
