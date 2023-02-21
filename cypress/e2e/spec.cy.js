@@ -2,26 +2,30 @@
    
    
    import { faker } from '@faker-js/faker';
-   const randomName = faker.name.fullName(); // Rowan Nikolaus
+   const email = faker.internet.email(); 
    context('Local Storage', () => 
    
    {
      beforeEach(() => {
-      cy.visit('https://admintransporteqas.alen.com.mx/')
+      cy.visit('https://subastasml.azurewebsites.net/')
       Cypress.on('uncaught:exception', (err,runnable) => {
         return false;
         
       });
       
     })
-    //Cypress.config('defaultCommandTimeout',60000)
+    Cypress.config('defaultCommandTimeout',60000)
     it('Test Case6', function (){
-    cy.get('#txtUsuario').type(randomName)
-    cy.get('.pt-4 > :nth-child(1) > :nth-child(1) > .cssLabelReg').should("contain.text",'Usuario')
-    cy.get('.col-10').should("contain.text",'Bienvenido al Portal ALEN Transportes')
-    cy.get('input#CLAVE.form-control').click()
-    cy.get('input#CLAVE.form-control').type("QUILANLA")
-    cy.get('#btnEntrar').click()
+    cy.get('.cart-button-area > [b-kzuoaw03hv=""]').click()
+    cy.get('a.custom-button').click({ force: true })
+    cy.get('#Input_Email').click({ force: true })
+    cy.get('#Input_Email').type(email)
+    cy.get('#Input_Password').click({ force: true })
+    cy.get('#Input_Password').type("Santo104@")
+    cy.get('#Input_ConfirmPassword').click({ force: true })
+    cy.get('#Input_ConfirmPassword').type("Santo104@")
+    cy.get('#registerSubmit').click({ force: true }) 
   })
 })
+
 
